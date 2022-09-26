@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
             body.velocity = new Vector2(horizontalinput * speed, body.velocity.y);
             if (isGrounded() && Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("BRUH");
                 body.gravityScale = 7;
                 Jump();
             }

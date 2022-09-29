@@ -10,48 +10,53 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxcoll;
     private float JumpCooldown;
     private float horizontalinput;
-    PhotonView view;
 
+    PhotonView View;
 
-    private void Start()
-    {
-        view = GetComponent<PhotonView>(); 
-    }
     private void Awake()
     {
         //Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
+
+        View = GetComponent<PhotonView>();
+        transform.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0F,1F), Random.Range(0, 1F), Random.Range(0, 1F));
     }
 
     private void Update()
     {
-        if (view.IsMine)
+        if (View.IsMine)
         {
-            horizontalinput = Input.GetAxis("Horizontal");
-
-
-            //Flip Player to left and right
-            if (horizontalinput > 0.01f)
-                transform.localScale = Vector3.one;
-            else if (horizontalinput < -0.01f)
-                transform.localScale = new Vector3(-1, 1, 1);
-
-            //Jump Logic
-            if (JumpCooldown > 0.2f)
-            {
-                body.velocity = new Vector2(horizontalinput * speed, body.velocity.y);
-                if (isGrounded() && Input.GetKey(KeyCode.Space))
-                {
-                    body.gravityScale = 7;
-                    Jump();
-                }
-            }
-            else
-                JumpCooldown += Time.deltaTime;
+            transform.eulerAngles = Vector3.zero;
+            Move();
         }
-
     }
+
+    private void Move()
+    {
+        horizontalinput = Input.GetAxis("Horizontal");
+        
+
+        //Flip Player to left and right
+        if (horizontalinput > 0.01f)
+            transform.localScale = Vector3.one;
+        else if (horizontalinput < -0.01f)
+            transform.localScale = new Vector3(-1, 1, 1);
+
+        //Jump Logic
+        if (JumpCooldown > 0.2f)
+        {
+            body.velocity = new Vector2(horizontalinput * speed, body.velocity.y);
+            if (isGrounded() && Input.GetKey(KeyCode.Space))
+            {
+                body.gravityScale = 7;
+                Jump();
+            }
+        }
+        else
+            JumpCooldown += Time.deltaTime;
+    }
+
     private void Jump()
     {
         if (isGrounded())

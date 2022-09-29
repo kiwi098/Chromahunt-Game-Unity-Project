@@ -1391,9 +1391,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 980686970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abb0312ff85c740ac32595e52bb02d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e164722981f30d4b944b7442c8b3f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  createInput: {fileID: 1606411416}
+  joinInput: {fileID: 1449496400}
 --- !u!1 &1227231319
 GameObject:
   m_ObjectHideFlags: 0

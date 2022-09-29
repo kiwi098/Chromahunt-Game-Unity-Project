@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (View.IsMine)
         {
+            transform.eulerAngles = Vector3.zero;
             Move();
         }
     }

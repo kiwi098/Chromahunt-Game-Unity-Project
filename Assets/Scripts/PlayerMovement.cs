@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxcoll;
     private float JumpCooldown;
     private float horizontalinput;
-    PhotonView view;
 
     PhotonView View;
 
@@ -21,13 +20,13 @@ public class PlayerMovement : MonoBehaviour
         boxcoll = GetComponent<BoxCollider2D>();
 
         View = GetComponent<PhotonView>();
+        transform.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0F,1F), Random.Range(0, 1F), Random.Range(0, 1F));
     }
 
     private void Update()
     {
         if (View.IsMine)
         {
-            transform.eulerAngles = new Vector3(0f, 0f, 0f);
             Move();
         }
     }
@@ -46,29 +45,15 @@ public class PlayerMovement : MonoBehaviour
         //Jump Logic
         if (JumpCooldown > 0.2f)
         {
-            horizontalinput = Input.GetAxis("Horizontal");
-
-
-            //Flip Player to left and right
-            if (horizontalinput > 0.01f)
-                transform.localScale = Vector3.one;
-            else if (horizontalinput < -0.01f)
-                transform.localScale = new Vector3(-1, 1, 1);
-
-            //Jump Logic
-            if (JumpCooldown > 0.2f)
+            body.velocity = new Vector2(horizontalinput * speed, body.velocity.y);
+            if (isGrounded() && Input.GetKey(KeyCode.Space))
             {
-                body.velocity = new Vector2(horizontalinput * speed, body.velocity.y);
-                if (isGrounded() && Input.GetKey(KeyCode.Space))
-                {
-                    body.gravityScale = 7;
-                    Jump();
-                }
+                body.gravityScale = 7;
+                Jump();
             }
-            else
-                JumpCooldown += Time.deltaTime;
         }
-
+        else
+            JumpCooldown += Time.deltaTime;
     }
 
     private void Jump()

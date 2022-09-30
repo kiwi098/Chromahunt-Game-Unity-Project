@@ -5,7 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
 
-public class LobbyManager : MonoBehaviour
+public class LobbyManager : MonoBehaviourPunCallbacks
 {
     /*public InputField roomInputField;
     public GameObject lobbyPanel;
@@ -44,7 +44,7 @@ public class LobbyManager : MonoBehaviour
 
             if(player.Value == PhotonNetwork.LocalPlayer)
             {
-                newPlayerItem.ApplyLocalChanges;
+                newPlayerItem.ApplyLocalChanges();
             }
         }
     }

@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
 
 public class PlayerItem : MonoBehaviour
 {
-    public Text playerName;
+    public TMP_Text playerName;
 
     Image backgroundImage;
     public Color highlightColor;
-    public Gameobject leftArrowButton;
+    public GameObject leftArrowButton;
     public GameObject rightArrowButton;
 
     private void Start()
@@ -29,6 +30,6 @@ public class PlayerItem : MonoBehaviour
 
     public void SetPlayerInfo(Player _player)
     {
-        playerName.Text = _player.NickName;
+        playerName.text = _player.NickName;
     }
 }

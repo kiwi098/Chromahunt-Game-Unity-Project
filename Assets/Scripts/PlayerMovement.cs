@@ -1,4 +1,5 @@
 using UnityEngine;
+using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,14 +11,28 @@ public class PlayerMovement : MonoBehaviour
     private float JumpCooldown;
     private float horizontalinput;
 
+    PhotonView View;
+
     private void Awake()
     {
         //Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
+
+        View = GetComponent<PhotonView>();
+        transform.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0F,1F), Random.Range(0, 1F), Random.Range(0, 1F));
     }
 
     private void Update()
+    {
+        if (View.IsMine)
+        {
+            transform.eulerAngles = Vector3.zero;
+            Move();
+        }
+    }
+
+    private void Move()
     {
         horizontalinput = Input.GetAxis("Horizontal");
         
@@ -34,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
             body.velocity = new Vector2(horizontalinput * speed, body.velocity.y);
             if (isGrounded() && Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("BRUH");
                 body.gravityScale = 7;
                 Jump();
             }
@@ -42,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         else
             JumpCooldown += Time.deltaTime;
     }
+
     private void Jump()
     {
         if (isGrounded())

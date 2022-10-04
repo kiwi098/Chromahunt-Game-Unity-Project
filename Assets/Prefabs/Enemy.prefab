@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 936060634171291300}
   - component: {fileID: 936060634171291301}
   - component: {fileID: 936060634171291297}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85bc24c2cc1e844dbe3483c3160021f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  maxHealth: 100
   MoveSpeed: 5
   AttackRange: 1.25
   JumpPower: 20

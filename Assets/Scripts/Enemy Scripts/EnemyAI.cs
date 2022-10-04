@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public float Health;
+    public int maxHealth = 100;
+    int currentHealth;
     public float MoveSpeed;
     public float AttackRange;
     public float JumpPower;
@@ -19,6 +20,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = maxHealth;
         ClosestPlayer = null;
 
         Body = GetComponent<Rigidbody2D>();
@@ -102,9 +104,17 @@ public class EnemyAI : MonoBehaviour
 
     void Death()
     {
-        if (Health <= 0)
+        if (currentHealth <= 0)
         {
+            Debug.Log("Enemy died!");
             Destroy(gameObject);
         }
+        
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Death();
     }
 }

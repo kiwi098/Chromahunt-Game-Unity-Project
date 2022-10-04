@@ -56,6 +56,15 @@ public class EnemyAI : MonoBehaviour
         float InputX = 0;
         float InputY = Body.velocity.y;
 
+        if ((ClosestPlayer.transform.position - transform.position).x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = Vector3.one;
+        }
+
         if (AttackRange < Vector2.Distance(ClosestPlayer.transform.position, transform.position))
         {
             if (Vector2.Distance(new Vector2(ClosestPlayer.transform.position.x, 0), new Vector2(transform.position.x, 0)) >=
@@ -63,12 +72,10 @@ public class EnemyAI : MonoBehaviour
             {
                 if ((ClosestPlayer.transform.position - transform.position).x < 0)
                 {
-                    transform.localScale = new Vector3(-1, 1, 1);
                     InputX = -1 * MoveSpeed;
                 }
                 else
                 {
-                    transform.localScale = Vector3.one;
                     InputX = 1 * MoveSpeed;
                 }
             }

@@ -125,14 +125,14 @@ TextureImporter:
         width: 241
         height: 244
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18ea86418052eff4db9ae1ca99c9715f
-      internalID: 1663287253
+      spriteID: 1131749273fe5d6468d11e02850cb011
+      internalID: -1226126132
       vertices: []
       indices: 
       edges: []
@@ -146,14 +146,14 @@ TextureImporter:
         width: 248
         height: 241
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27d34d9e12012484ea50fd7f226d2d73
-      internalID: 1407375727
+      spriteID: 911f40bf7ef7aaa42b8398eafa0b124e
+      internalID: -1076562745
       vertices: []
       indices: 
       edges: []
@@ -162,19 +162,19 @@ TextureImporter:
       name: Lancet Animation_2
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1359
-        width: 241
-        height: 244
+        x: 662
+        y: 1735
+        width: 65
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfe4878494fca7648bea88ee21aa65da
-      internalID: -2066707878
+      spriteID: 0643e8861e9944448adf6b4f2a0b61c4
+      internalID: -951566141
       vertices: []
       indices: 
       edges: []
@@ -183,19 +183,19 @@ TextureImporter:
       name: Lancet Animation_3
       rect:
         serializedVersion: 2
-        x: 252
-        y: 1356
-        width: 237
-        height: 231
+        x: 759
+        y: 1750
+        width: 117
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77e5ef951171e86469962cb35daf4040
-      internalID: -854855263
+      spriteID: 061c7613679ca3e48b2eaa08eb0b94af
+      internalID: 1066767440
       vertices: []
       indices: 
       edges: []
@@ -204,19 +204,19 @@ TextureImporter:
       name: Lancet Animation_4
       rect:
         serializedVersion: 2
-        x: 493
-        y: 1341
-        width: 228
-        height: 256
+        x: 250
+        y: 1359
+        width: 237
+        height: 229
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bced5c21f45881f4a9a41b32504ecbde
-      internalID: -1404439209
+      spriteID: 974ff6a68b0266548a01df1026a9ee8e
+      internalID: 110828287
       vertices: []
       indices: 
       edges: []
@@ -225,19 +225,19 @@ TextureImporter:
       name: Lancet Animation_5
       rect:
         serializedVersion: 2
-        x: 724
+        x: 497
         y: 1349
-        width: 215
-        height: 253
+        width: 234
+        height: 238
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e9d988341566f74ea3eaec0537854e5
-      internalID: 1730670258
+      spriteID: f169772b4135dae458ce1f9bc5c4ec06
+      internalID: 1427830938
       vertices: []
       indices: 
       edges: []
@@ -246,19 +246,19 @@ TextureImporter:
       name: Lancet Animation_6
       rect:
         serializedVersion: 2
-        x: 812
-        y: 1588
-        width: 4
-        height: 4
+        x: 736
+        y: 1358
+        width: 177
+        height: 225
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 897d72a844ee92a4297d2b0773467701
-      internalID: 1159586545
+      spriteID: 6fb743184b7e9c44badfe8f6a59b1c41
+      internalID: -1720683761
       vertices: []
       indices: 
       edges: []
@@ -268,18 +268,102 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 940
-        y: 1349
+        y: 1351
         width: 229
-        height: 249
+        height: 227
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 576700e35aa156944bd3a991bf196372
-      internalID: -730719157
+      spriteID: f27f6ea215b199b449795111165089bb
+      internalID: 1355325799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lancet Animation_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1083
+        width: 241
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2a7f66a5dfb8345bdc6ce36527859c
+      internalID: -1388888368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lancet Animation_9
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1091
+        width: 168
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a78875d03a41a04190373500271a60d
+      internalID: -1345483800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lancet Animation_11
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1053
+        width: 240
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c911818584767478aa0c2e699a763a
+      internalID: 647447374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lancet Animation_12
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1065
+        width: 217
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e7014cf9aad5e43be037982b4ffc31
+      internalID: -1171454482
       vertices: []
       indices: 
       edges: []
@@ -295,29 +379,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Lancet Animation_5: 1730670258
-      Lancet Animation_14: 862693059
-      Lancet Animation_3: -854855263
-      Lancet Animation_13: 1768828880
-      Lancet Animation_15: -1361435722
-      Lancet Animation_17: 1795060847
-      Lancet Animation_21: 1522004942
-      Lancet Animation_4: -1404439209
-      Lancet Animation_20: 407170999
-      Lancet Animation_18: -2125428952
-      Lancet Animation_22: 1133249306
-      Lancet Animation_6: 1159586545
-      Lancet Animation_9: 37807630
-      Lancet Animation_19: 1855316312
-      Lancet Animation_10: -1385317140
-      Lancet Animation_12: 1991803803
-      Lancet Animation_7: -730719157
-      Lancet Animation_16: -905496328
-      Lancet Animation_2: -2066707878
-      Lancet Animation_11: 551870977
-      Lancet Animation_0: 1663287253
-      Lancet Animation_1: 1407375727
-      Lancet Animation_8: -982449214
+      Lancet Animation_5: 1427830938
+      Lancet Animation_14: -1135007591
+      Lancet Animation_3: 1066767440
+      Lancet Animation_13: 233785774
+      Lancet Animation_15: -413518854
+      Lancet Animation_4: 110828287
+      Lancet Animation_6: -1720683761
+      Lancet Animation_9: -1345483800
+      Lancet Animation_10: -511654051
+      Lancet Animation_12: -1171454482
+      Lancet Animation_7: 1355325799
+      Lancet Animation_2: -951566141
+      Lancet Animation_11: 647447374
+      Lancet Animation_0: -1226126132
+      Lancet Animation_1: -1076562745
+      Lancet Animation_8: -1388888368
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

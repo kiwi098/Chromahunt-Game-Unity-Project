@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Animator animator;
     private Rigidbody2D body;
     private BoxCollider2D boxcoll;
     private float JumpCooldown;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         //Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
 
         View = GetComponent<PhotonView>();
         transform.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0F,1F), Random.Range(0, 1F), Random.Range(0, 1F));
@@ -38,11 +40,15 @@ public class PlayerMovement : MonoBehaviour
         
 
         //Flip Player to left and right
-        if (horizontalinput > 0.01f)
+        if (horizontalinput > 0.01f){
             transform.localScale = Vector3.one;
-        else if (horizontalinput < -0.01f)
+            animator.SetFloat("speed", 1.0f);   //player is moving,  play walk animation
+        }else if (horizontalinput < -0.01f){
             transform.localScale = new Vector3(-1, 1, 1);
-
+            animator.SetFloat("speed", 1.0f);   //player is moving, play walk animation
+        }else{
+            animator.SetFloat("speed", -1.0f);  //player stopped, play idle
+        }
         //Jump Logic
         if (JumpCooldown > 0.2f)
         {

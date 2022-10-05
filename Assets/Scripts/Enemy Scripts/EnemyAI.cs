@@ -6,10 +6,18 @@ public class EnemyAI : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
+
     public float MoveSpeed;
-    public float AttackRange;
     public float JumpPower;
+
+    public Transform attackPoint;
+    public float AttackRange;
+    public int AttackDamage;
+    public float AttackRate;
+    private float nextAttackTime = 0f;
+
     public LayerMask groundLayer;
+    public LayerMask PlayerLayer;
 
     private GameObject[] Players;
     private GameObject ClosestPlayer;
@@ -65,7 +73,7 @@ public class EnemyAI : MonoBehaviour
             transform.localScale = Vector3.one;
         }
 
-        if (AttackRange < Vector2.Distance(ClosestPlayer.transform.position, transform.position))
+        if (AttackRange*2.2f < Vector2.Distance(ClosestPlayer.transform.position, transform.position))
         {
             if (Vector2.Distance(new Vector2(ClosestPlayer.transform.position.x, 0), new Vector2(transform.position.x, 0)) >=
                 Vector2.Distance(new Vector2(0, ClosestPlayer.transform.position.y), new Vector2(0, transform.position.y)))
@@ -97,9 +105,18 @@ public class EnemyAI : MonoBehaviour
 
     void AttackPlayer()
     {
-        if (AttackRange < Vector2.Distance(ClosestPlayer.transform.position, transform.position))
+        if (AttackRange*2.2f >= Vector2.Distance(ClosestPlayer.transform.position, transform.position))
         {
+            if (Time.time >= nextAttackTime)
+            {
+                Collider2D[] HitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, PlayerLayer);
 
+                foreach(Collider2D Player in HitPlayers)
+                {
+                    Player.GetComponent<PlayerMovement>().TakeDamage(AttackDamage);
+                }
+                nextAttackTime = Time.time + 1f / AttackRate;
+            }
         }
     }
 
@@ -123,5 +140,13 @@ public class EnemyAI : MonoBehaviour
     {
         currentHealth -= damage;
         Death();
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, AttackRange);
     }
 }

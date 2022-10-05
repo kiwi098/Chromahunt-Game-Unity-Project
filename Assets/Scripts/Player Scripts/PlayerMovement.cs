@@ -3,6 +3,8 @@ using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public int MaxHealth;
+    public int CurrentHealth;
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private LayerMask groundLayer;
@@ -16,13 +18,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        CurrentHealth = MaxHealth;
         //Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
 
         View = GetComponent<PhotonView>();
-        transform.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0F,1F), Random.Range(0, 1F), Random.Range(0, 1F));
     }
 
     private void Update()
@@ -77,6 +79,22 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxcoll.bounds.center, boxcoll.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
+    }
+
+    void Death()
+    {
+        if (CurrentHealth <= 0)
+        {
+            Debug.Log("Player died!");
+            //Destroy(gameObject);
+        }
+        
+    }
+
+    public void TakeDamage(int damage)
+    {
+        CurrentHealth -= damage;
+        Death();
     }
 }
 

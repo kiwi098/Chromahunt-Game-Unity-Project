@@ -182,6 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc436ae4d127904e895001e15e614ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 100
+  CurrentHealth: 0
   speed: 10
   jumpPower: 20
   groundLayer:

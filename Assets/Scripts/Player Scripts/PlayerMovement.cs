@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
 
         View = GetComponent<PhotonView>();
-        transform.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0F,1F), Random.Range(0, 1F), Random.Range(0, 1F));
     }
 
     private void Update()

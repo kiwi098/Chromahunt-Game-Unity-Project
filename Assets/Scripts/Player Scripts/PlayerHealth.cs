@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] private float startingHealth;
-    public float currentHealth { get; private set; }
+    public float currentHealth;
     private Animator anim;
     private bool dead;
 
@@ -46,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
                     component.enabled = false;
                 }
                 dead = true;
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 90);
             }
         }
     }

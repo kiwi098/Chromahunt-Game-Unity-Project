@@ -3,8 +3,6 @@ using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int MaxHealth;
-    public int CurrentHealth;
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private LayerMask groundLayer;
@@ -19,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        CurrentHealth = MaxHealth;
         //Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
@@ -82,21 +79,6 @@ public class PlayerMovement : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-    void Death()
-    {
-        if (CurrentHealth <= 0)
-        {
-            Debug.Log("Player died!");
-            //Destroy(gameObject);
-        }
-        
-    }
-
-    public void TakeDamage(int damage)
-    {
-        CurrentHealth -= damage;
-        Death();
-    }
     private bool onWall()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxcoll.bounds.center, boxcoll.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);

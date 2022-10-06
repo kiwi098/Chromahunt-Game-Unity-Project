@@ -551,10 +551,6 @@ PrefabInstance:
       value: RangePlayer
       objectReference: {fileID: 0}
     - target: {fileID: 9377286882913014, guid: 63b6d5af3e2112d4ba66943b441fb089, type: 3}
-      propertyPath: arrows.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9377286882913014, guid: 63b6d5af3e2112d4ba66943b441fb089, type: 3}
       propertyPath: arrows.Array.data[0]
       value: 
       objectReference: {fileID: 176221667}

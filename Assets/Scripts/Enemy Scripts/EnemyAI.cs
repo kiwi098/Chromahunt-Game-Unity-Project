@@ -113,7 +113,7 @@ public class EnemyAI : MonoBehaviour
 
                 foreach(Collider2D Player in HitPlayers)
                 {
-                    Player.GetComponent<PlayerMovement>().TakeDamage(AttackDamage);
+                    Player.GetComponent<PlayerHealth>().TakeDamage(AttackDamage);
                 }
                 nextAttackTime = Time.time + 1f / AttackRate;
             }

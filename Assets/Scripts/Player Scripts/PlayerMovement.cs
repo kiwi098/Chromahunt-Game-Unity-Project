@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask wallLayer;
     [SerializeField] private Animator animator;
     private Rigidbody2D body;
     private BoxCollider2D boxcoll;
@@ -95,6 +96,16 @@ public class PlayerMovement : MonoBehaviour
     {
         CurrentHealth -= damage;
         Death();
+    }
+    private bool onWall()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxcoll.bounds.center, boxcoll.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
+        return raycastHit.collider != null;
+    }
+
+    public bool cantAttack()
+    {
+        return horizontalinput == 0 && isGrounded() && !onWall();
     }
 }
 

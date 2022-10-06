@@ -96,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         CurrentHealth -= damage;
         Death();
     }
+    
     public bool cantAttack()
     {
         return true;

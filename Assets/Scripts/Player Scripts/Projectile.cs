@@ -9,12 +9,12 @@ public class Projectile : MonoBehaviour
     private float lifetime;
     
     private Animator anim;
-    private BoxCollider2D boxCollider;
+    [SerializeField]private BoxCollider2D boxCollider;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        //boxCollider = GetComponent<BoxCollider2D>();
     }
     private void Update()
     {
@@ -28,11 +28,10 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit = true;
-        boxCollider.enabled = false;
-
         if (collision.tag == "Enemy")
         {
+            hit = true;
+            boxCollider.enabled = false;
             collision.GetComponent<EnemyAI>().TakeDamage(arrowDamage);
             Deactivate();
         }

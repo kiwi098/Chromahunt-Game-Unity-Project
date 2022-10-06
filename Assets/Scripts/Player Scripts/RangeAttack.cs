@@ -25,7 +25,7 @@ public class RangeAttack : MonoBehaviour
     }
     private void Attack()
     {
-        anim.SetTrigger("attack");
+        //anim.SetTrigger("attack");
         cooldownTImer = 0;
 
         arrows[FindArrow()].transform.position = firePoint.position;

@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  arrowDamage: 5
+  arrowDamage: 10
   boxCollider: {fileID: 8795970317324142800}

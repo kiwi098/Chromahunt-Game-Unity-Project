@@ -17,6 +17,9 @@ public class EnemyAI : MonoBehaviour
     public float AttackRate;
     private float nextAttackTime = 0f;
 
+    public GameObject SpawnPoint;
+    public float PatrolRange;
+
     public LayerMask groundLayer;
     public LayerMask PlayerLayer;
 
@@ -59,6 +62,10 @@ public class EnemyAI : MonoBehaviour
         {
             ChasePlayer();
             AttackPlayer();
+        }
+        else
+        {
+            Patrol();
         }
         Death();
     }
@@ -118,7 +125,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (Time.time >= nextAttackTime)
             {
-                Collider2D[] HitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, PlayerLayer);
+                Collider2D[] HitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange/2, PlayerLayer);
 
                 foreach(Collider2D Player in HitPlayers)
                 {

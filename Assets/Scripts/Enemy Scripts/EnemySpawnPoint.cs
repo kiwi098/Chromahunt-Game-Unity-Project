@@ -10,6 +10,7 @@ public class EnemySpawnPoint : MonoBehaviour
     public int TriggerLimit;
 
     public GameObject Enemy;
+    private GameObject Spawned;
 
     private int TriggerCount = 0;
 
@@ -29,7 +30,8 @@ public class EnemySpawnPoint : MonoBehaviour
 
                 for (int ctr = 0; ctr < EnemyCount; ctr++)
                 {
-                    Instantiate(Enemy, transform.position, Quaternion.identity);
+                    Spawned = Instantiate(Enemy, transform.position, Quaternion.identity);
+                    Spawned.GetComponent<EnemyAI>().SpawnPoint = transform.gameObject;
                 }
 
                 TriggerCount = TriggerCount + 1;

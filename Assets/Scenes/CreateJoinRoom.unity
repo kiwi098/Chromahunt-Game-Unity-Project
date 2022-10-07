@@ -1664,8 +1664,11 @@ MonoBehaviour:
   m_ReferenceResolution: {x: 1920, y: 1080}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_ScreenMatchMode: 1
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   m_ScreenMatchMode: 0
@@ -1858,9 +1861,13 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> 2091051d16f5851c94e0e46f4f66dcf1b9a0d70a
 --- !u!1 &1227231319
+=======
+--- !u!1 &1251367819
+>>>>>>> Stashed changes
 =======
 --- !u!1 &1251367819
 >>>>>>> Stashed changes

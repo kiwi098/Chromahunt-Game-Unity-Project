@@ -15,7 +15,8 @@ public class ConnectToLobby : MonoBehaviourPunCallbacks
         if (usernameInput.text.Length >= 1)
         {
             PhotonNetwork.NickName = usernameInput.text;
-            buttonText.text = "Connecting ...";
+            buttonText.text = "Connecting...";
+            PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.ConnectUsingSettings();
         }
     }

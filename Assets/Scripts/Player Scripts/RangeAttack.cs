@@ -32,6 +32,9 @@ public class RangeAttack : MonoBehaviour
         arrows[FindArrow()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
 
         //pool fireballs
+
+
+        //anim.ResetTrigger("attack");
     }
     private int FindArrow()
     {

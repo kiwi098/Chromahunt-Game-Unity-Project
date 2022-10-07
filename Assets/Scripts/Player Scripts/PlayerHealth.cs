@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Health")]
-    [SerializeField] private float startingHealth;
+    [SerializeField] public float startingHealth;
     public float currentHealth;
     private Animator anim;
     private bool dead;
@@ -68,5 +68,13 @@ public class PlayerHealth : MonoBehaviour
     private void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    public void HealMoment(float MaxHeal)
+    {
+        if (currentHealth < startingHealth)
+        {
+            currentHealth = currentHealth + MaxHeal;
+        }
     }
 }

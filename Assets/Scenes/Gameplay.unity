@@ -504,7 +504,11 @@ Transform:
   - {fileID: 146981327}
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 1
+=======
+  m_RootOrder: 2
+>>>>>>> Stashed changes
 =======
   m_RootOrder: 2
 >>>>>>> Stashed changes
@@ -565,18 +569,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   playerPrefab: {fileID: 407294843679899738, guid: 432585e8a8b09e0458ba37ad804a941e, type: 3}
   minX: 0
   maxX: 0
   minY: 0
   maxY: 0
 =======
+=======
+>>>>>>> Stashed changes
   playerPrefabs: {fileID: 0}
   spawnPoints:
   - {fileID: 2103791893}
   - {fileID: 506050149}
   - {fileID: 1728049069}
   - {fileID: 965433562}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!4 &298156238
 Transform:
@@ -587,7 +597,11 @@ Transform:
   m_GameObject: {fileID: 298156236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
+=======
+  m_LocalPosition: {x: -7.63, y: -2.9, z: -5.2180896}
+>>>>>>> Stashed changes
 =======
   m_LocalPosition: {x: -7.63, y: -2.9, z: -5.2180896}
 >>>>>>> Stashed changes
@@ -596,7 +610,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 2
+=======
+  m_RootOrder: 3
+>>>>>>> Stashed changes
 =======
   m_RootOrder: 3
 >>>>>>> Stashed changes
@@ -870,7 +888,10 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1917,4 +1938,7 @@ Transform:
   m_Father: {fileID: 1123302271}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
 
     public float MoveSpeed;
     public float JumpPower;
+    public float DetectRange;
 
     public Transform attackPoint;
     public float AttackRange;
@@ -54,9 +55,17 @@ public class EnemyAI : MonoBehaviour
         }
 
         transform.eulerAngles = Vector3.zero;
-        ChasePlayer();
-        AttackPlayer();
+        if (Vector2.Distance(ClosestPlayer.transform.position, transform.position) < DetectRange)
+        {
+            ChasePlayer();
+            AttackPlayer();
+        }
         Death();
+    }
+
+    void Patrol()
+    {
+        
     }
 
     void ChasePlayer()

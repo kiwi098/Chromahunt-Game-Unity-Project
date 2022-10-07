@@ -179,8 +179,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  MoveSpeed: 5
+  MoveSpeed: 4
   JumpPower: 20
+  DetectRange: 8
   attackPoint: {fileID: 628220615}
   AttackRange: 0.75
   AttackDamage: 4

@@ -11,12 +11,23 @@ public class MeleeAttack : MonoBehaviour
     public int attackDamage;
     public float attackRate;
     private float nextAttackTime = 0f;
+
+    private Animator anim;
+    private PlayerMovement playerMovement;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+        playerMovement = GetComponent<PlayerMovement>();
+    }
+
     void Update()
     {
         if(Time.time >= nextAttackTime)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                anim.SetTrigger("attack");
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }

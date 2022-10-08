@@ -55,7 +55,10 @@ public class EzraHealMoment : MonoBehaviour
 
     void HealPlayers()
     {
-        //anim.SetTrigger("heal");
-        ClosestPlayer.GetComponent<PlayerHealth>().HealMoment(MaxHeal);
+        if (ClosestPlayer != null)
+        {
+            anim.SetTrigger("heal");
+            ClosestPlayer.GetComponent<PlayerHealth>().HealMoment(MaxHeal);
+        }
     }
 }

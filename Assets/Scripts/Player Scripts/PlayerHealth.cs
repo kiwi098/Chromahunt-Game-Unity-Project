@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] public float startingHealth;
     public float currentHealth;
     private Animator anim;
-    private bool dead;
+    public bool dead;
 
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Awake()
     {
+        dead = false;
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();

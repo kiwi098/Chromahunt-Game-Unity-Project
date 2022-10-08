@@ -46,24 +46,44 @@ public class EnemyAI : MonoBehaviour
     {
         Players = GameObject.FindGameObjectsWithTag("Player");
 
+        if (ClosestPlayer != null)
+        {
+            if (ClosestPlayer.GetComponent<PlayerHealth>().dead == true)
+            {
+                ClosestPlayer = null;
+            }
+        }
+
         for (int ctr = 0; ctr < Players.Length; ctr++)
         {
             if (ClosestPlayer == null)
             {
-                ClosestPlayer = Players[ctr];
+                if (Players[ctr].GetComponent<PlayerHealth>().dead == false)
+                {
+                    ClosestPlayer = Players[ctr];
+                }
             }
             else if (Vector2.Distance(Players[ctr].transform.position, transform.position) < 
-                Vector2.Distance(ClosestPlayer.transform.position, transform.position))
+                Vector2.Distance(ClosestPlayer.transform.position, transform.position) &&
+                Players[ctr].GetComponent<PlayerHealth>().dead == false)
             {
                 ClosestPlayer = Players[ctr];
             }
         }
 
         transform.eulerAngles = Vector3.zero;
-        if (Vector2.Distance(ClosestPlayer.transform.position, transform.position) < DetectRange)
+        if (ClosestPlayer != null)
         {
-            ChasePlayer();
-            AttackPlayer();
+            if (Vector2.Distance(ClosestPlayer.transform.position, transform.position) < DetectRange)
+            {
+                ChasePlayer();
+                AttackPlayer();
+            }
+            else
+            {
+                animator.SetFloat("speed", -1.0f);
+                Patrol();
+            }
         }
         else
         {

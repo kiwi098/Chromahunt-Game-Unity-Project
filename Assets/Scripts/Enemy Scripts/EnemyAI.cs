@@ -28,6 +28,7 @@ public class EnemyAI : MonoBehaviour
 
     private Rigidbody2D Body;
     private BoxCollider2D BoxCollider;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class EnemyAI : MonoBehaviour
 
         Body = GetComponent<Rigidbody2D>();
         BoxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -65,6 +67,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
+            animator.SetFloat("speed", -1.0f);
             Patrol();
         }
         Death();
@@ -102,6 +105,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     InputX = 1 * MoveSpeed;
                 }
+                animator.SetFloat("speed", 1.0f);
             }
             else
             {
@@ -115,6 +119,10 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            animator.SetFloat("speed", -1.0f);
+        }
 
         Body.velocity = new Vector2(InputX, InputY);
     }
@@ -125,6 +133,8 @@ public class EnemyAI : MonoBehaviour
         {
             if (Time.time >= nextAttackTime)
             {
+                animator.SetTrigger("attack");
+
                 Collider2D[] HitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange/2, PlayerLayer);
 
                 foreach(Collider2D Player in HitPlayers)
@@ -154,6 +164,7 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        animator.SetTrigger("ouch");
         currentHealth -= damage;
         Death();
     }

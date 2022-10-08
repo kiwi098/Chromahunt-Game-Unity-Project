@@ -75,6 +75,18 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth < startingHealth)
         {
             currentHealth = currentHealth + MaxHeal;
+            StartCoroutine(HealMomentCoroutine());
+        }
+    }
+
+    private IEnumerator HealMomentCoroutine()
+    {
+        for (int i = 0; i < numberOfFlashes; i++)
+        {
+            spriteRend.color = new Color(0, 1, 0, 0.5f);
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
     }
 }

@@ -179,13 +179,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85bc24c2cc1e844dbe3483c3160021f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  MoveSpeed: 4
-  JumpPower: 20
+  maxHealth: 135
+  MoveSpeed: 3
+  JumpPower: 15
   DetectRange: 8
   attackPoint: {fileID: 628220615}
   AttackRange: 0.75
-  AttackDamage: 4
+  AttackDamage: 10
   AttackRate: 0.33
   SpawnPoint: {fileID: 0}
   PatrolRange: 4

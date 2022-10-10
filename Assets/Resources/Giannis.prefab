@@ -159,7 +159,7 @@ MonoBehaviour:
     m_Bits: 8
   wallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   animator: {fileID: 0}
 --- !u!114 &9377286882913009
 MonoBehaviour:
@@ -252,16 +252,16 @@ MonoBehaviour:
   attackCooldown: 0.5
   firePoint: {fileID: 9377286893488565}
   arrows:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
+  - {fileID: 1157470996619684672, guid: 8a25e791b78696a42bc85174afdd6a38, type: 3}
 --- !u!114 &3991663425806303198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,8 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0f7c3874ae09b4ca3078aa98e38fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 80
   currentHealth: 0
+  dead: 0
   iFramesDuration: 1
   numberOfFlashes: 3
   components:

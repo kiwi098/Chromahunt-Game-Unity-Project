@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Bits: 8
   wallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   animator: {fileID: 0}
 --- !u!114 &330614911424986625
 MonoBehaviour:
@@ -301,6 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
+  dead: 0
   iFramesDuration: 1
   numberOfFlashes: 3
   components:

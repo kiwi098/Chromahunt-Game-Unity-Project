@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
+  dead: 0
   iFramesDuration: 1
   numberOfFlashes: 3
   components:

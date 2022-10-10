@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: ba21375e8ef6421478fab20dea33f666
   - enabled: 1
-    path: Assets/Scenes/LoadingScreen.unity
-    guid: 91834463445211c40b6da2125c19b707
+    path: Assets/Scenes/Nickname.unity
+    guid: 407e8a6807d95ef46b654d5e9a73de8f
   - enabled: 1
     path: Assets/Scenes/CreateJoinRoom.unity
     guid: 759abd7c0e4115f41bf1cbd31981f4d3
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: 67571b59f55391e4fb56d4e4112256ff
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: 2cda990e2423bbf4892e6590ba056729

@@ -1032,6 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebd20b630562724abd18d7a25765577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CM_Vcam: {fileID: 1795996225}
   playerPrefabs:
   - {fileID: 7981720420801421483, guid: 432585e8a8b09e0458ba37ad804a941e, type: 3}
   - {fileID: 9377286882913013, guid: 63b6d5af3e2112d4ba66943b441fb089, type: 3}

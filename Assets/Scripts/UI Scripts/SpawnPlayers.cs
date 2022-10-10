@@ -15,8 +15,9 @@ public class SpawnPlayers : MonoBehaviour
 
          int randomNumber = Random.Range(0, spawnPoints.Length);
          Transform spawnPoint = spawnPoints[randomNumber];
-         GameObject playerToSpawn = playerPrefabs[(int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]];
-         PhotonNetwork.Instantiate(playerToSpawn.name, spawnPoint.position, Quaternion.identity);
+         //GameObject playerToSpawn = playerPrefabs[(int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]];
+         Debug.Log(PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]);
+         PhotonNetwork.Instantiate(playerPrefabs[(int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]].name, spawnPoint.position, Quaternion.identity);
      }
     }
 

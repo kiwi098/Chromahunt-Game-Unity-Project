@@ -20,19 +20,16 @@ public class PlayerItem : MonoBehaviourPunCallbacks
 
     Player player;
 
-    private void Awake()
-    {
-        backgroundImage = GetComponent<Image>();
-    }
-
     public void SetPlayerInfo(Player _player)
     {
         playerName.text = _player.NickName;
         player = _player;
         UpdatePlayerItem(player);
+        PhotonNetwork.SetPlayerCustomProperties(playerProperties);
+        Debug.Log(playerProperties["playerAvatar"]);
     }
 
-    private void Start()
+    private void Awake()
     {
         backgroundImage = GetComponent<Image>();
     }
@@ -55,6 +52,7 @@ public class PlayerItem : MonoBehaviourPunCallbacks
             playerProperties["playerAvatar"] = (int)playerProperties["playerAvatar"] - 1;
         }
         PhotonNetwork.SetPlayerCustomProperties(playerProperties);
+        Debug.Log(playerProperties["playerAvatar"]);
     }
 
     public void OnClickRightArrow()
@@ -68,6 +66,7 @@ public class PlayerItem : MonoBehaviourPunCallbacks
             playerProperties["playerAvatar"] = (int)playerProperties["playerAvatar"] + 1;
         }
         PhotonNetwork.SetPlayerCustomProperties(playerProperties);
+        Debug.Log(playerProperties["playerAvatar"]);
     }
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)

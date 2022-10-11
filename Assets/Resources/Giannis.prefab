@@ -253,17 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 0.5
   firePoint: {fileID: 9377286893488565}
-  arrows:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  arrows: []
 --- !u!114 &3991663425806303198
 MonoBehaviour:
   m_ObjectHideFlags: 0

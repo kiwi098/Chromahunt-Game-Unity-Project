@@ -288,7 +288,7 @@ MonoBehaviour:
   iFramesDuration: 1
   numberOfFlashes: 3
   components:
-  - {fileID: 0}
+  - {fileID: 1152310160}
   - {fileID: 83764462693709278}
 --- !u!114 &1152310160
 MonoBehaviour:

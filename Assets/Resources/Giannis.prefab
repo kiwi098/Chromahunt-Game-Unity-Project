@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0f7c3874ae09b4ca3078aa98e38fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 80
   currentHealth: 0
   dead: 0
   iFramesDuration: 1

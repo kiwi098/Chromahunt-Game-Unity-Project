@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc436ae4d127904e895001e15e614ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 6
   jumpPower: 20
   groundLayer:
     serializedVersion: 2
@@ -267,8 +267,8 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
-  attackDamage: 20
-  attackRate: 2
+  attackDamage: 15
+  attackRate: 0.8
 --- !u!95 &2336262518459677543
 Animator:
   serializedVersion: 4
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0f7c3874ae09b4ca3078aa98e38fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 150
   currentHealth: 0
   dead: 0
   iFramesDuration: 1

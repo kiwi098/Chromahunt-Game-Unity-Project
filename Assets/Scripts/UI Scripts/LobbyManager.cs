@@ -152,6 +152,4 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("Gameplay");
 
     }
-
-
 }

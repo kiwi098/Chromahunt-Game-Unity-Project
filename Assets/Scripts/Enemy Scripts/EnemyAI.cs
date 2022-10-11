@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class EnemyAI : MonoBehaviour
     private BoxCollider2D BoxCollider;
     private Animator animator;
 
+    PhotonView View;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,8 @@ public class EnemyAI : MonoBehaviour
         Body = GetComponent<Rigidbody2D>();
         BoxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -179,10 +184,15 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("Enemy died!");
             Destroy(gameObject);
         }
-        
     }
 
     public void TakeDamage(int damage)
+    {
+        View.RPC("TakeDamageRPC", RpcTarget.AllBuffered, damage);
+    }
+
+    [PunRPC]
+    void TakeDamageRPC(int damage)
     {
         animator.SetTrigger("ouch");
         currentHealth -= damage;

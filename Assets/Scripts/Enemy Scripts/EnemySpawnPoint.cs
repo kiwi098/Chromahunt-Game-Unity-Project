@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Photon.Pun;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
@@ -30,7 +31,8 @@ public class EnemySpawnPoint : MonoBehaviour
 
                 for (int ctr = 0; ctr < EnemyCount; ctr++)
                 {
-                    Spawned = Instantiate(Enemy, transform.position, Quaternion.identity);
+                    //Spawned = Instantiate(Enemy, transform.position, Quaternion.identity);
+                    Spawned = PhotonNetwork.Instantiate(Enemy.name, transform.position, Quaternion.identity);
                     Spawned.GetComponent<EnemyAI>().SpawnPoint = transform.gameObject;
                 }
 

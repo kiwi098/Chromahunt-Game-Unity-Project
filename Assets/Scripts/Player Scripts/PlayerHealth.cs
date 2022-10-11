@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Photon.Pun;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -18,22 +19,27 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Behaviour[] components;
     private bool invulnerable;
 
+    PhotonView View;
+
     private void Awake()
     {
         dead = false;
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
+
+        View = GetComponent<PhotonView>();
     }
     public void TakeDamage(float _damage)
     {
         if (invulnerable) return;
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        //currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        View.RPC("TakeDamageRPC", RpcTarget.AllBuffered, _damage);
 
         if (currentHealth > 0)
         {
-            anim.SetTrigger("hurt");
-            StartCoroutine(Invunerability());
+            //anim.SetTrigger("hurt");
+            //StartCoroutine(Invunerability());
         }
         else
         {
@@ -51,6 +57,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+
     private IEnumerator Invunerability()
     {
         invulnerable = true;
@@ -66,6 +73,14 @@ public class PlayerHealth : MonoBehaviour
         invulnerable = false;
     }
 
+    [PunRPC]
+    void TakeDamageRPC(float _damage)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        anim.SetTrigger("hurt");
+        StartCoroutine(Invunerability());
+    }
+
     private void Deactivate()
     {
         gameObject.SetActive(false);
@@ -75,9 +90,15 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currentHealth < startingHealth)
         {
-            currentHealth = currentHealth + MaxHeal;
-            StartCoroutine(HealMomentCoroutine());
+            View.RPC("HealMomentRPC", RpcTarget.AllBuffered, MaxHeal);
         }
+    }
+
+    [PunRPC]
+    void HealMomentRPC(float MaxHeal)
+    {
+        currentHealth = currentHealth + MaxHeal;
+        StartCoroutine(HealMomentCoroutine());
     }
 
     private IEnumerator HealMomentCoroutine()

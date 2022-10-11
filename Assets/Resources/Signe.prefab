@@ -328,7 +328,7 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: speed
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: attack
   m_SynchronizeLayers:
   - SynchronizeType: 0

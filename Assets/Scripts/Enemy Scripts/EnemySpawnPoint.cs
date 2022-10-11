@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
@@ -27,16 +28,19 @@ public class EnemySpawnPoint : MonoBehaviour
         {
             if (TriggerCount < TriggerLimit)
             {
-                Debug.Log("SPAWN");
-
-                for (int ctr = 0; ctr < EnemyCount; ctr++)
+                if (PhotonNetwork.IsMasterClient)
                 {
-                    //Spawned = Instantiate(Enemy, transform.position, Quaternion.identity);
-                    Spawned = PhotonNetwork.Instantiate(Enemy.name, transform.position, Quaternion.identity);
-                    Spawned.GetComponent<EnemyAI>().SpawnPoint = transform.gameObject;
-                }
+                    Debug.Log("SPAWN");
 
-                TriggerCount = TriggerCount + 1;
+                    for (int ctr = 0; ctr < EnemyCount; ctr++)
+                    {
+                        //Spawned = Instantiate(Enemy, transform.position, Quaternion.identity);
+                        Spawned = PhotonNetwork.InstantiateRoomObject(Enemy.name, transform.position, Quaternion.identity);
+                        Spawned.GetComponent<EnemyAI>().SpawnPoint = transform.gameObject;
+                    }
+
+                    TriggerCount = TriggerCount + 1;
+                }
             }
         }
     }

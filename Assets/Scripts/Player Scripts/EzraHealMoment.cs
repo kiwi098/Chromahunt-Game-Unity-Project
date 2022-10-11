@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class EzraHealMoment : MonoBehaviour
 {
@@ -14,42 +15,49 @@ public class EzraHealMoment : MonoBehaviour
     private Animator anim;
     private PlayerMovement playerMovement;
 
+    PhotonView View;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Players = GameObject.FindGameObjectsWithTag("Player");
-
-        for (int ctr = 0; ctr < Players.Length; ctr++)
+        if (View.IsMine)
         {
-            if (ClosestPlayer == null)
+            Players = GameObject.FindGameObjectsWithTag("Player");
+
+            for (int ctr = 0; ctr < Players.Length; ctr++)
             {
-                if (Players[ctr] != gameObject)
+                if (ClosestPlayer == null)
                 {
-                    ClosestPlayer = Players[ctr];
+                    if (Players[ctr] != gameObject)
+                    {
+                        ClosestPlayer = Players[ctr];
+                    }
+                }
+                else if (Vector2.Distance(Players[ctr].transform.position, transform.position) < 
+                    Vector2.Distance(ClosestPlayer.transform.position, transform.position))
+                {
+                    if (Players[ctr] != gameObject)
+                    {
+                        ClosestPlayer = Players[ctr];
+                    }
                 }
             }
-            else if (Vector2.Distance(Players[ctr].transform.position, transform.position) < 
-                Vector2.Distance(ClosestPlayer.transform.position, transform.position))
-            {
-                if (Players[ctr] != gameObject)
-                {
-                    ClosestPlayer = Players[ctr];
-                }
-            }
-        }
-        HealTimer = HealTimer - Time.deltaTime;
+            HealTimer = HealTimer - Time.deltaTime;
 
-        if (Input.GetMouseButton(0) && HealTimer <= 0 && playerMovement.cantAttack())
-        {
-            HealPlayers();
-            HealTimer = HealCoolDown;
+            if (Input.GetMouseButton(0) && HealTimer <= 0 && playerMovement.cantAttack())
+            {
+                HealPlayers();
+                HealTimer = HealCoolDown;
+            }
         }
     }
 

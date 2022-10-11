@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class MeleeAttack : MonoBehaviour
 {
@@ -15,21 +16,28 @@ public class MeleeAttack : MonoBehaviour
     private Animator anim;
     private PlayerMovement playerMovement;
 
+    PhotonView View;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+
+        View = GetComponent<PhotonView>();
     }
 
     void Update()
     {
-        if(Time.time >= nextAttackTime)
+        if (View.IsMine)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if(Time.time >= nextAttackTime)
             {
-                anim.SetTrigger("attack");
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    anim.SetTrigger("attack");
+                    Attack();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
             }
         }
     }

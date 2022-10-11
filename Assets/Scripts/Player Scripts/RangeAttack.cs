@@ -1,4 +1,4 @@
-
+using Photon.Pun;
 using UnityEngine;
 
 public class RangeAttack : MonoBehaviour
@@ -11,17 +11,24 @@ public class RangeAttack : MonoBehaviour
     private PlayerMovement playerMovement;
     private float cooldownTImer = Mathf.Infinity;
 
+    PhotonView View;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+
+        View = GetComponent<PhotonView>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && cooldownTImer > attackCooldown && playerMovement.cantAttack())
+        if (View.IsMine)
+        {
+            if (Input.GetMouseButton(0) && cooldownTImer > attackCooldown && playerMovement.cantAttack())
             Attack();
-        cooldownTImer += Time.deltaTime;
+            cooldownTImer += Time.deltaTime;
+        }
     }
     private void Attack()
     {

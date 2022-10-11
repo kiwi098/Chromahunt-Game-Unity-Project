@@ -204,10 +204,10 @@ TextureImporter:
       name: Signe Animation_4
       rect:
         serializedVersion: 2
-        x: 67
-        y: 1282
-        width: 186
-        height: 216
+        x: 1357
+        y: 1643
+        width: 100
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: Signe Animation_5
       rect:
         serializedVersion: 2
-        x: 389
-        y: 1281
-        width: 210
-        height: 209
+        x: 67
+        y: 1282
+        width: 186
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +246,10 @@ TextureImporter:
       name: Signe Animation_6
       rect:
         serializedVersion: 2
-        x: 737
-        y: 1363
-        width: 5
-        height: 5
+        x: 389
+        y: 1281
+        width: 210
+        height: 209
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: Signe Animation_7
       rect:
         serializedVersion: 2
-        x: 742
-        y: 1266
-        width: 200
-        height: 220
+        x: 737
+        y: 1363
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,6 +288,27 @@ TextureImporter:
       name: Signe Animation_8
       rect:
         serializedVersion: 2
+        x: 742
+        y: 1266
+        width: 200
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e457c95e88349d54eb377897a923997a
+      internalID: 1149722210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_9
+      rect:
+        serializedVersion: 2
         x: 1055
         y: 1261
         width: 207
@@ -299,8 +320,260 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e457c95e88349d54eb377897a923997a
-      internalID: 1149722210
+      spriteID: 599495369c70e7e43a46e84424719b6b
+      internalID: -637610659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_10
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 905
+        width: 263
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150533d15996808449897318d758c445
+      internalID: 2066734001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_11
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 906
+        width: 252
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea9171db5d78a94ca41935c65ce59ea
+      internalID: -1303583208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_12
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1024
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd438f3cde45a9418b976d1998b57f9
+      internalID: 623079748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_13
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 909
+        width: 278
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad041c82574301143ada3482ccab1a8c
+      internalID: -1571422220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_14
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 918
+        width: 292
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f98850c03a9854f88316a272b830dc
+      internalID: -1090079087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_15
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 938
+        width: 73
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150bd9743ba7f9c48862a4549f37bcf2
+      internalID: -889491521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 900
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8673d69cfad30c842ae74dffdb3313e3
+      internalID: 1496151544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_17
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 602
+        width: 204
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f62398fe5e6aca41998d03f11d84c8f
+      internalID: -628638393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_18
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 580
+        width: 229
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79556bd65cffbc241be51a5b0cad2ae3
+      internalID: 1068227387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_19
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 584
+        width: 192
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4623d44e986d84b4ba0d5d179bee0465
+      internalID: 667842835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_20
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 569
+        width: 194
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db62c3d2513f2be4f954c681ea0d98c4
+      internalID: -1421107447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signe Animation_21
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 558
+        width: 221
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7324ae3184f92448538dcafd97ed3f
+      internalID: -1353797334
       vertices: []
       indices: 
       edges: []
@@ -317,14 +590,27 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Signe Animation_0: 1732638813
+      Signe Animation_16: 1496151544
       Signe Animation_6: -162338585
+      Signe Animation_20: -1421107447
+      Signe Animation_18: 1068227387
       Signe Animation_3: -1046175918
       Signe Animation_1: -1358678594
       Signe Animation_8: 1149722210
+      Signe Animation_12: 623079748
+      Signe Animation_14: -1090079087
+      Signe Animation_19: 667842835
+      Signe Animation_17: -628638393
       Signe Animation_5: -1213289970
+      Signe Animation_11: -1303583208
+      Signe Animation_10: 2066734001
       Signe Animation_7: -1430057466
+      Signe Animation_15: -889491521
+      Signe Animation_21: -1353797334
+      Signe Animation_13: -1571422220
       Signe Animation_2: 851342633
       Signe Animation_4: -782821200
+      Signe Animation_9: -637610659
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

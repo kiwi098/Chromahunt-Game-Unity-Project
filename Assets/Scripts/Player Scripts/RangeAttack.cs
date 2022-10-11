@@ -19,6 +19,17 @@ public class RangeAttack : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
 
         View = GetComponent<PhotonView>();
+        FindArrows();
+    }
+
+    private void FindArrows()
+    {
+        arrows = GameObject.FindGameObjectsWithTag("Bullet");
+
+        for (int ctr = 0; ctr < arrows.Length; ctr++)
+        {
+            arrows[ctr].SetActive(false);
+        }
     }
 
     private void Update()

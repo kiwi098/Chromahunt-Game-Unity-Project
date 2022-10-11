@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SigneRun
+  m_Name: SigneAttack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -1213289970, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
+      value: {fileID: 2066734001, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
     - time: 0.083333336
-      value: {fileID: -162338585, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
+      value: {fileID: -1303583208, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
     - time: 0.16666667
-      value: {fileID: 1149722210, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
+      value: {fileID: -1571422220, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
     - time: 0.25
-      value: {fileID: -637610659, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
+      value: {fileID: -1090079087, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -1213289970, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
-    - {fileID: -162338585, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
-    - {fileID: 1149722210, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
-    - {fileID: -637610659, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
+    - {fileID: 2066734001, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
+    - {fileID: -1303583208, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
+    - {fileID: -1571422220, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
+    - {fileID: -1090079087, guid: 4a472c3137fb0a643a977758d7bd5b9a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -17,6 +17,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        SceneManager.LoadScene("CreateJoinRoom");
+        SceneManager.LoadScene("Nickname");
     }
 }

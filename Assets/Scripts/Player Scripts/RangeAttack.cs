@@ -46,6 +46,7 @@ public class RangeAttack : MonoBehaviour
     private void Attack()
     {
         SoundEffect.PlaySound("GiannisAttack");
+        
         anim.SetTrigger("attack");
         cooldownTImer = 0;
 

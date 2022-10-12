@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using System;
 using System.Runtime.CompilerServices;
+using UnityEngine.SceneManagement;
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
@@ -145,11 +146,32 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         {
             playButton.SetActive(true);
         }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            StartCoroutine(Disconnect());
+        }
+    }
+
+    IEnumerator Disconnect()
+    {
+        PhotonNetwork.Disconnect();
+        while (PhotonNetwork.IsConnected)
+        {
+            yield return null;
+            Debug.Log("Disconnecting. . .");
+        }
+        SceneManager.LoadScene("MainMenu");
+        Debug.Log("DISCONNECTED!");
     }
 
     public void OnClickPlayButton()
     {
-        PhotonNetwork.LoadLevel("Gameplay");
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.LoadLevel("Gameplay");
+        }
 
     }
 }

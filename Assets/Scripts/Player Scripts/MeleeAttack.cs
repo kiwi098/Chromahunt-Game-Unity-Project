@@ -35,7 +35,7 @@ public class MeleeAttack : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     SoundEffect.PlaySound("SigneAttack");
-
+                    
                     anim.SetTrigger("attack");
                     Attack();
                     nextAttackTime = Time.time + 1f / attackRate;

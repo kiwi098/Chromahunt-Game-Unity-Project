@@ -25,4 +25,12 @@ public class ConnectToLobby : MonoBehaviourPunCallbacks
     {
         SceneManager.LoadScene("CreateJoinRoom");
     }
+
+    void Update() 
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
 }

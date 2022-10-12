@@ -141,6 +141,18 @@ public class EnemyAI : MonoBehaviour
                         Body.gravityScale = 7;
                         InputY = 1 * JumpPower;
                     }
+                    else
+                    {
+                        if ((ClosestPlayer.transform.position - transform.position).x < 0)
+                        {
+                            InputX = -1 * MoveSpeed;
+                        }
+                        else
+                        {
+                            InputX = 1 * MoveSpeed;
+                        }
+                        animator.SetFloat("speed", 1.0f);
+                    }
                 }
             }
         }

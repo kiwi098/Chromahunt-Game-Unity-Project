@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHeal: 20
-  HealCoolDown: 6
+  HealCoolDown: 5
   HealTimer: 0
   ClosestPlayer: {fileID: 0}
 --- !u!114 &6795262252783459706

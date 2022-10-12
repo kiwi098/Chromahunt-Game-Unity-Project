@@ -56,7 +56,6 @@ public class EzraHealMoment : MonoBehaviour
             if (Input.GetMouseButton(0) && HealTimer <= 0 && playerMovement.cantAttack())
             {
                 HealPlayers();
-                HealTimer = HealCoolDown;
             }
         }
     }
@@ -65,8 +64,12 @@ public class EzraHealMoment : MonoBehaviour
     {
         if (ClosestPlayer != null)
         {
-            anim.SetTrigger("heal");
-            ClosestPlayer.GetComponent<PlayerHealth>().HealMoment(MaxHeal);
+            if (ClosestPlayer.GetComponent<PlayerHealth>().currentHealth < ClosestPlayer.GetComponent<PlayerHealth>().startingHealth)
+            {
+                anim.SetTrigger("heal");
+                ClosestPlayer.GetComponent<PlayerHealth>().HealMoment(MaxHeal);
+                HealTimer = HealCoolDown;
+                }
         }
     }
 }

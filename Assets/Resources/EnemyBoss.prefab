@@ -188,7 +188,7 @@ MonoBehaviour:
   DetectRange: 20
   attackPoint: {fileID: 628220615}
   AttackRange: 2
-  AttackDamage: 10
+  AttackDamage: 20
   AttackRate: 0.33
   SpawnPoint: {fileID: 0}
   PatrolRange: 4

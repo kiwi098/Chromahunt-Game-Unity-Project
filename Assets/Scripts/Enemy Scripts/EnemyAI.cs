@@ -166,6 +166,7 @@ public class EnemyAI : MonoBehaviour
 
     void AttackPlayer()
     {
+        
         if (AttackRange*2.2f >= Vector2.Distance(ClosestPlayer.transform.position, transform.position))
         {
             if (Time.time >= nextAttackTime)

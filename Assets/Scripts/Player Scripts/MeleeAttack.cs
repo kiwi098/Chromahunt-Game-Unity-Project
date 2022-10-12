@@ -39,6 +39,7 @@ public class MeleeAttack : MonoBehaviour
                     anim.SetTrigger("attack");
                     Attack();
                     nextAttackTime = Time.time + 1f / attackRate;
+                    
                 }
             }
         }

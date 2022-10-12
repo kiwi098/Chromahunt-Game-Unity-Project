@@ -36,7 +36,9 @@ public class RangeAttack : MonoBehaviour
     {
         if (View.IsMine)
         {
+       
             if (Input.GetMouseButton(0) && cooldownTImer > attackCooldown && playerMovement.cantAttack())
+
             Attack();
             cooldownTImer += Time.deltaTime;
         }

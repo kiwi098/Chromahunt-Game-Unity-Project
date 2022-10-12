@@ -31,6 +31,8 @@ public class EnemyAI : MonoBehaviour
     private BoxCollider2D BoxCollider;
     private Animator animator;
 
+    private float myScale;
+
     PhotonView View;
 
     // Start is called before the first frame update
@@ -38,6 +40,8 @@ public class EnemyAI : MonoBehaviour
     {
         currentHealth = maxHealth;
         ClosestPlayer = null;
+
+        myScale = transform.localScale.x;
 
         Body = GetComponent<Rigidbody2D>();
         BoxCollider = GetComponent<BoxCollider2D>();
@@ -110,11 +114,11 @@ public class EnemyAI : MonoBehaviour
 
         if ((ClosestPlayer.transform.position - transform.position).x < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-myScale, myScale, myScale);
         }
         else
         {
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector3(myScale, myScale, myScale);
         }
 
         if (AttackRange*2.2f < Vector2.Distance(ClosestPlayer.transform.position, transform.position))

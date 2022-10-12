@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 3962827991911685359}
   - component: {fileID: 4026545878809700403}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: EnemyBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 936060634171291322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628220615}
@@ -182,12 +182,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85bc24c2cc1e844dbe3483c3160021f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
-  MoveSpeed: 3
+  maxHealth: 150
+  MoveSpeed: 4
   JumpPower: 15
-  DetectRange: 25
+  DetectRange: 20
   attackPoint: {fileID: 628220615}
-  AttackRange: 0.75
+  AttackRange: 2
   AttackDamage: 10
   AttackRate: 0.33
   SpawnPoint: {fileID: 0}

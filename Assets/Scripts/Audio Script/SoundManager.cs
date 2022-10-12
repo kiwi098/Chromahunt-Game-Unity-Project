@@ -8,9 +8,7 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
 
-  
-
-
+ 
     void Start()
     {
 

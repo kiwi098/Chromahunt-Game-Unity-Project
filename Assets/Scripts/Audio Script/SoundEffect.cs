@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 public class SoundEffect : MonoBehaviour
 {
 
-    public static AudioClip GiannisSoundAttack, LancetSoundAttack, SigneSoundAttack, EnemyHitSound, GoblinAttackSound;
+    public static AudioClip GiannisSoundAttack, LancetSoundAttack, SigneSoundAttack, EnemyHitSound, GoblinAttackSound, PlayerHitSound, DeadPlayerSound;
     static AudioSource audioSrc;
 
     void Start()
@@ -16,6 +16,8 @@ public class SoundEffect : MonoBehaviour
         SigneSoundAttack = Resources.Load<AudioClip>("SigneAttack");
         EnemyHitSound = Resources.Load<AudioClip>("EnemyHit");
         GoblinAttackSound = Resources.Load<AudioClip>("GoblinAttack");
+        PlayerHitSound = Resources.Load<AudioClip>("PlayerHit");
+        DeadPlayerSound = Resources.Load<AudioClip>("DeadPlayer");
 
         audioSrc = GetComponent<AudioSource>();
 
@@ -42,6 +44,12 @@ public class SoundEffect : MonoBehaviour
                 break;
             case "GoblinAttack":
                 audioSrc.PlayOneShot(GoblinAttackSound);
+                break;
+            case "PlayerHit":
+                audioSrc.PlayOneShot(PlayerHitSound);
+                break;
+            case "DeadPlayer":
+                audioSrc.PlayOneShot(DeadPlayerSound);
                 break;
 
         }

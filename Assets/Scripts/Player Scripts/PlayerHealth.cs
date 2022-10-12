@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
         {
             if (!dead)
             {
+                SoundEffect.PlaySound("DeadPlayer");
                 anim.SetTrigger("die");
 
                 //Deactivate all attached components
@@ -76,6 +77,7 @@ public class PlayerHealth : MonoBehaviour
     [PunRPC]
     void TakeDamageRPC(float _damage)
     {
+        SoundEffect.PlaySound("PlayerHit");
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
         anim.SetTrigger("hurt");
         StartCoroutine(Invunerability());

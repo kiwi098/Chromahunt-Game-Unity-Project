@@ -154,10 +154,12 @@ public class EnemyAI : MonoBehaviour
 
     void AttackPlayer()
     {
+        
         if (AttackRange*2.2f >= Vector2.Distance(ClosestPlayer.transform.position, transform.position))
         {
             if (Time.time >= nextAttackTime)
             {
+                SoundEffect.PlaySound("GoblinAttack");
                 animator.SetTrigger("attack");
 
                 Collider2D[] HitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange/2, PlayerLayer);
@@ -194,6 +196,7 @@ public class EnemyAI : MonoBehaviour
     [PunRPC]
     void TakeDamageRPC(int damage)
     {
+        SoundEffect.PlaySound("EnemyHit");
         animator.SetTrigger("ouch");
         currentHealth -= damage;
         Death();

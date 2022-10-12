@@ -8,27 +8,11 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
 
-    private static SoundManager instance = null;
-    public static SoundManager Instance
+  
+
+
+    void Start()
     {
-    get{ return instance;} 
-    }
-
-
-    void Awake()
-    {
-
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-        else
-        {
-            instance= this;
-        }
-        DontDestroyOnLoad(this.gameObject);
-
 
         if (!PlayerPrefs.HasKey("musicVolume"))
         {

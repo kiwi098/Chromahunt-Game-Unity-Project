@@ -12,10 +12,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private Animator animator;
+    
     private Rigidbody2D body;
     private BoxCollider2D boxcoll;
     private float JumpCooldown;
     private float horizontalinput;
+    
 
     PhotonView View;
 
@@ -25,9 +27,10 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-
-        View = GetComponent<PhotonView>();
+        View = GetComponent<PhotonView>();   
     }
+
+
 
     private void Update()
     {
@@ -36,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
             transform.eulerAngles = Vector3.zero;
             Move();
         }
+
+        
     }
 
     private void Move()
@@ -53,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
         }else{
             animator.SetFloat("speed", -1.0f);  //player stopped, play idle
         }
+
+
         //Jump Logic
         if (JumpCooldown > 0.2f)
         {
@@ -93,5 +100,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return horizontalinput == 0 && isGrounded() && !onWall();
     }
+
+    
 }
 

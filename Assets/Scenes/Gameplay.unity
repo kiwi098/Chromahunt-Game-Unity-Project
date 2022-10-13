@@ -4527,7 +4527,7 @@ GameObject:
   - component: {fileID: 1033043194}
   - component: {fileID: 1033043196}
   - component: {fileID: 1033043195}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: FloatingFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4810,7 +4810,7 @@ GameObject:
   - component: {fileID: 1180004526}
   - component: {fileID: 1180004528}
   - component: {fileID: 1180004527}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: FloatingFloor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
